@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QueueLess - Token Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f6ff;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .card {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #0002;
+        }
+        h1 { color: green; }
+        .number {
+            font-size: 55px;
+            color: #2563eb;
+            font-weight: bold;
+        }
+        a {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Token Booked Successfully!</h1>
+        <p>Service: {{ token.service.name }}</p>
+        <p>Your Token Number</p>
+        <div class="number">{{ token.token_number }}</div>
+        <p>Status: {{ token.get_status_display }}</p>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
